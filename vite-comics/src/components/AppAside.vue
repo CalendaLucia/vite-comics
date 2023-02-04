@@ -6,28 +6,28 @@
 
             items : [
                 {
-                    img: '/src/assets/buy-comics-digital-comics.png',
+                    img: '/src/assets/img/buy-comics-digital-comics.png',
                     text: "DIGITAL COMICS",
                     url: "#"
                 },
 
                 {
-                    img: "/src/assets/buy-comics-merchandise.png",
+                    img: "/src/assets/img/buy-comics-merchandise.png",
                     text: "DC MERCHANDISE",
                     url: "#"
                 },
                 {
-                    img: "/src/assets/buy-comics-subscriptions.png",
+                    img: "/src/assets/img/buy-comics-subscriptions.png",
                     text: "SUBSCRIPTION",
                     url: "#"
                 },
                 {
-                    img: "/src/assets/buy-comics-shop-locator.png",
+                    img: "/src/assets/img/buy-comics-shop-locator.png",
                     text: "COMIC CHOP LOCATOR",
                     url: "#"
                 },
                 {
-                    img: "/src/assets/buy-dc-power-visa.svg",
+                    img: "/src/assets/img/buy-dc-power-visa.svg",
                     text: "DC POWER VISA",
                     url: "#"
                 }
@@ -53,49 +53,43 @@
     </div>
 </template>
 
-<style lang="css">
-
-body {
-    position: relative;
-}
+<style lang="scss" scoped>
+@use '../styles/partials/mixins.scss' as *;
+@use '../styles/partials/variables.scss' as *;
+@use '../styles/partials/reset.scss' as *;
 
 #blue-container {
-    background-color: #0282f9;
+    background-color:$primary-color;
     width: 100%;
     position: absolute;
-    top: 180px;
+    bottom: 0px;
     left: 0px;
-}
+    padding: 30px 0px;
 
-.icons {
-    width: 100%;
-    color: white;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-}
+    .icons {
+       width: 100%;
+       color: white;
+       @include listStyle (inline-block);
+       @include flex (center, center);
 
-.icons li {
-    display: inline-block;
-    padding: 0px 10px;
-}
+       & li {
+          padding: 0px 10px;
+          & .link {
+               @include linkStyle;
+            }
 
-.icons img {
-    width: 30px;
-    vertical-align: middle;
-    padding: 0px 10px;
-}
-
-.link {
-    text-decoration: none;
-}
-
-.text-link {
-    font-size: 12px;
-    color: white;
-    display: inline;
-    vertical-align: middle;
-    
+          & img {
+             width: 65px;
+             vertical-align: middle;
+             padding: 0px 10px;
+          }
+          .text-link {
+              font-size: 12px;
+              color: white;
+              display: inline;
+              vertical-align: middle;
+            }
+       }
+     }
 }
 </style>

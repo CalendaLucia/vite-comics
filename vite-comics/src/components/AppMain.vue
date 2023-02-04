@@ -1,6 +1,7 @@
 <script>
 import AppCards from './AppCards.vue'
 import comicData from '../comicData.json'
+import AppAside from './AppAside.vue'
 export default {
     name:'AppMain',
     data() {
@@ -9,7 +10,8 @@ export default {
         }
     },
     components: {
-        AppCards
+        AppCards,
+        AppAside
     }
 }
 </script>
@@ -19,6 +21,7 @@ export default {
         <div id="content">
             <div class="cards">
                 <AppCards :comics="comicData" />
+                <AppAside/>
             </div>
         </div>
     </main>
@@ -35,16 +38,13 @@ main  {
 
     #content {
         background-color: black;
-        padding: 30px 20px 30px 20px;
+        padding: 30px 20px 100px 20px;
 
         .cards {
             width: 70%;
             margin: 0 auto;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
+            @include flex (space-around, center);
             flex-wrap: wrap;
-          
         }
 
     }
