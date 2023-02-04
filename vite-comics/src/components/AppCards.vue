@@ -62,12 +62,7 @@ export default {
 
          &:hover {
           cursor: pointer;
-         }
-        
-       }
-    
+         }     
+       }   
   }
-
-   
-
 </style>

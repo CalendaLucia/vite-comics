@@ -1,56 +1,56 @@
 <script>
+import jumbotron from './jumbotron.vue';
 export default {
-    name:'AppHeader',
+    name: "AppHeader",
+    components: {
+         jumbotron
+    },
     data() {
         return {
-
             items: [
-
                 {
-                    name:'CHARACTERS',
-                    link:'#'
+                    name: "CHARACTERS",
+                    link: "#"
                 },
                 {
-                    name:'COMICS',
-                    link:'#'
+                    name: "COMICS",
+                    link: "#"
                 },
                 {
-                    name:'MOVIES',
-                    link:'#'
+                    name: "MOVIES",
+                    link: "#"
                 },
                 {
-                    name:'TV',
-                    link:'#'
+                    name: "TV",
+                    link: "#"
                 },
                 {
-                    name:'GAMES',
-                    link:'#'
+                    name: "GAMES",
+                    link: "#"
                 },
                 {
-                    name:'COLLECTIBLES',
-                    link:'#'
+                    name: "COLLECTIBLES",
+                    link: "#"
                 },
                 {
-                    name:'VIDEOS',
-                    link:'#'
+                    name: "VIDEOS",
+                    link: "#"
                 },
                 {
-                    name:'FANS',
-                    link:'#'
+                    name: "FANS",
+                    link: "#"
                 },
                 {
-                    name:'NEWS',
-                    link:'#'
+                    name: "NEWS",
+                    link: "#"
                 },
                 {
-                    name:'SHOP',
-                    link:'#'
+                    name: "SHOP",
+                    link: "#"
                 }
             ]
-
-        }
-    
-  }
+        };
+    },
 }
 </script>
 
@@ -70,10 +70,13 @@ export default {
             </ul>
         </div>
         </div>
+        <div id="jumbotron">
+            <jumbotron/>
+        </div>
     </header>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss" >
 @use '../styles/partials/mixins.scss' as *;
 @use '../styles/partials/variables.scss' as *;
 @use '../styles/partials/reset.scss' as *;
@@ -136,9 +139,8 @@ export default {
       }   
 
    }
-    
-
 }
+
 
 </style>
 
