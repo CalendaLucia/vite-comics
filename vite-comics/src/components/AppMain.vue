@@ -1,19 +1,24 @@
 <script>
+import AppCards from './AppCards.vue'
+import comicData from '../comicData.json'
 export default {
     name:'AppMain',
     data() {
-        return {
-            
+        return { 
+            comicData
         }
     },
+    components: {
+        AppCards
+    }
 }
 </script>
 
 <template>
     <main>
         <div id="content">
-            <div class="text">
-                <h5>-- Content goes here --  </h5>
+            <div class="cards">
+                <AppCards :comics="comicData" />
             </div>
         </div>
     </main>
@@ -27,9 +32,21 @@ export default {
 main  {
     position: relative;
     z-index: 3;
-}
-.text {
-    background-color: black;
-    padding: 20px 0px;
+
+    #content {
+        background-color: black;
+        padding: 30px 20px 30px 20px;
+
+        .cards {
+            width: 70%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+          
+        }
+
+    }
 }
 </style>
