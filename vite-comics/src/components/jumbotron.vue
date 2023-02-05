@@ -22,6 +22,7 @@ export default {
 @use '../styles/partials/reset.scss' as *;
 @use '../styles/partials/mixins.scss' as *;
 @use '../styles/partials/variables.scss' as *;
+@use '../styles/partials/media.scss' as *;
 
 #jumbotron {
     width: 100%;

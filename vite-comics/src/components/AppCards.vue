@@ -20,10 +20,11 @@ export default {
    
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @use '../styles/partials/reset.scss' as *;
 @use '../styles/partials/mixins.scss' as *;
 @use '../styles/partials/variables.scss' as *;
+@import '../styles/partials/media.scss' ;
 
    .comics {
        width: calc((100% / 6) - 10px);
@@ -66,3 +67,4 @@ export default {
        }   
   }
 </style>
+

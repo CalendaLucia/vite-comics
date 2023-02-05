@@ -1,19 +1,41 @@
-@media media  and (max-width: 412px ) {
-     #container {
-        width: 100%;
-        padding: 10px 0px;
-        background-color: rebeccapurple;
+@media only screen and (max-width: 500px) {
+   #container {
+      max-width: 100%;
 
-        .logo {
-            width: 10%;
-        }
-     }
+      .logo {
+         justify-content: center;
+      }
+      
+      .nav-bar {
+         width: 100%;
 
-     .nav-bar {
-        width: 50%;
-        
-     }
-  }
+         .menu {
+            display: flex;
+            flex-direction: column;
+            display: inline-block;
+
+            .item {
+               line-height: 5px;
+            }
+            
+         }
+         
+      }
+   }
+
+   #jumbotron {
+      height: 100px;
+   }
+
+   
+   .comics {
+      width: calc(100% / 3);
+      height: 50px;
+   
+   }   
+ }
+
+ 
 
 
   

@@ -76,11 +76,11 @@ export default {
     </header>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @use '../styles/partials/mixins.scss' as *;
 @use '../styles/partials/variables.scss' as *;
 @use '../styles/partials/reset.scss' as *;
-@use '../styles/partials/media.scss' as *;
+
 
 #container, .logo, .navbar {
   @include flex(space-around, center);
@@ -141,5 +141,10 @@ export default {
 
    }
 }
+
+</style>
+
+<style lang="scss" scoped>
+  @import '../styles/partials/media.scss';
 </style>
 
