@@ -13,7 +13,8 @@ footer {
       width: 80%;
       padding: 20px 0px;
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
+      margin: 0 auto;
   
       .DC-logo {
         position: absolute;
@@ -46,6 +47,10 @@ footer {
 
           & a {
             text-decoration: none;
+
+              &:hover {
+                color: $primary-color;
+              }
           }
 
         }

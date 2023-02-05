@@ -3,7 +3,7 @@ import jumbotron from './jumbotron.vue';
 export default {
     name: "AppHeader",
     components: {
-         jumbotron
+         jumbotron,
     },
     data() {
         return {
@@ -76,10 +76,11 @@ export default {
     </header>
 </template>
 
-<style lang="scss" >
+<style lang="scss">
 @use '../styles/partials/mixins.scss' as *;
 @use '../styles/partials/variables.scss' as *;
 @use '../styles/partials/reset.scss' as *;
+@use '../styles/partials/media.scss' as *;
 
 #container, .logo, .navbar {
   @include flex(space-around, center);
@@ -88,7 +89,7 @@ export default {
 #container {
      width: 100%;
      padding: 10px 0px;
-     background-color:#ffffff;
+     background-color:white;
      position: relative;
      z-index: 3;
    
@@ -140,8 +141,5 @@ export default {
 
    }
 }
-
-
-
 </style>
 
