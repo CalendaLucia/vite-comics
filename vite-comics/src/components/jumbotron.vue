@@ -16,22 +16,23 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../styles/partials/reset.scss' as *;
+@use '../styles/partials/mixins.scss' as *;
+@use '../styles/partials/variables.scss' as *;
 
-#jumbotron {
-    #jumbotron {
-    width: 100%;
-    padding: 40px 0px;
+  
 
     .img-jumbo {
         width: 100%;
-        height: 100px;
-
+        height: 50vh;
+        background-color: rebeccapurple;
+   
+    
         &img {
-            width: 100%;
-            object-fit: cover;
+            @include objectFit;
+            
         }
-    }
-}
+    
 }
 
 </style>

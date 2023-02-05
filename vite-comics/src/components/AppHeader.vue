@@ -62,13 +62,13 @@ export default {
                 <img src="../assets/img/dc-logo.png" alt="logo">
              </div>
           </div>
-        <div class="nav-bar">
+          <div class="nav-bar">
             <ul class="menu">
                 <li class="item" v-for="item in items" :key="item.id">
                     <a :href="item.link"> {{ item.name }}</a> 
                 </li>
             </ul>
-        </div>
+          </div>
         </div>
         <div id="jumbotron">
             <jumbotron/>
@@ -140,6 +140,7 @@ export default {
 
    }
 }
+
 
 
 </style>
